@@ -87,6 +87,6 @@ variable "ok_actions" {
 }
 
 variable "period" {
-  description = "The length, in seconds, used each time the metric specified in metric_name is evaluated. Valid values are 10, 30, and any multiple of 60. An alarm's total current evaluation period can be no longer than one day, so this multiplied by evaluation_periods cannot be more than 86,400 seconds. The actual period used may be changed by `metric_sample_days as CloudWatch places certain requirements of period length when retrieving metric data."
+  description = "The length, in seconds, used each time the metric specified in metric_name is evaluated. Valid values are 10, 30, and any multiple of 60. An alarm's total current evaluation period can be no longer than one day, so this multiplied by evaluation_periods cannot be more than 86,400 seconds. The actual period used may be changed by metric_sample_days as CloudWatch places certain requirements of period length when retrieving metric data."
   type        = "string"
 }
