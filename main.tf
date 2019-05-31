@@ -12,6 +12,7 @@ module "creator" {
   dead_letter_arn   = "${var.dead_letter_arn}"
   environment_variables {
     ALARM_ACTIONS             = "${join(",", var.alarm_actions)}"
+    ALARM_NAME                = "${var.alarm_name}"
     BOUNDS                    = "${var.bounds}"
     DATAPOINTS_TO_ALARM       = "${var.datapoints_to_alarm}"
     EVALUATION_PERIODS        = "${var.evaluation_periods}"
