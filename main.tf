@@ -2,7 +2,7 @@ resource "random_uuid" "name_suffix" {
 }
 
 resource "aws_iam_policy" "creator" {
-  name    = "LambdaLambdaLambdaCloudwatchStddevAlarmCreator-${random_uuid.result}"
+  name    = "LambdaLambdaLambdaCloudwatchStddevAlarmCreator-${random_uuid.name_suffix.result}"
   policy  = "${data.aws_iam_policy_document.creator.json}"
 }
 
