@@ -55,3 +55,11 @@ resource "aws_lambda_permission" "creator" {
   source_arn    = "${aws_cloudwatch_event_rule.creator.arn}"
   statement_id  = "${module.creator.name}-execution-permission"
 }
+
+resource "aws_cloudwatch_event_target" "creator" {
+  arn         = "${module.creator.arn}"
+  depends_on  = [
+    "aws_lambda_permission.creator",
+  ]
+  rule        = "${aws_cloudwatch_event_rule.creator.name}"
+}
