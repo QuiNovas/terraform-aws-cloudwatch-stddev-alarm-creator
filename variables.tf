@@ -4,6 +4,11 @@ variable "alarm_actions" {
   type        = "list"
 }
 
+variable "alarm_name" {
+  description = "The name used for this alarm"
+  type        = "string"
+}
+
 variable "bounds" {
   default     = "Both"
   description = "The type of alarm threshold(s) to set. Either AlarmHigh, AlarmLow or Both. Defaults to Both."
