@@ -1,3 +1,3 @@
 locals {
-  creator_name = "cloudwatch-stddev-alarm-creator-${random_uuid.name_suffix.result}"
+  creator_name = "cloudwatch-stddev-alarm-creator-${random_string.name_suffix.result}"
 }
