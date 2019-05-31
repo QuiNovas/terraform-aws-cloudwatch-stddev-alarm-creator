@@ -1,8 +1,10 @@
-resource "random_uuid" "name_suffix" {
+resource "random_string" "name_suffix" {
+  length  = 16
+  special = false
 }
 
 resource "aws_iam_policy" "creator" {
-  name    = "LambdaLambdaLambdaCloudwatchStddevAlarmCreator-${random_uuid.name_suffix.result}"
+  name    = "LambdaLambdaLambdaCloudwatchStddevAlarmCreator-${random_string.name_suffix.result}"
   policy  = "${data.aws_iam_policy_document.creator.json}"
 }
 
