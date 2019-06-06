@@ -26,6 +26,7 @@ module "creator" {
     NUM_STANDARD_DEVIATION    = "${var.num_standard_deviation}"
     OK_ACTIONS                = "${join(",", var.ok_actions)}"
     PERIOD                    = "${var.period}"
+    TREAT_MISSING_DATA        = "${var.treat_missing_data}"
   }
   handler           = "function.handler"
   kms_key_arn       = "${var.kms_key_arn}"
@@ -35,7 +36,7 @@ module "creator" {
   ]
   policy_arns_count = 1
   runtime           = "python3.7"
-  l3_object_key     = "quinovas/cloudwatch-stddev-alarm-creator/cloudwatch-stddev-alarm-creator-0.0.1.zip"
+  l3_object_key     = "quinovas/cloudwatch-stddev-alarm-creator/cloudwatch-stddev-alarm-creator-0.0.2.zip"
   source            = "QuiNovas/lambdalambdalambda/aws"
   timeout           = 900
   version           = "0.2.0"
