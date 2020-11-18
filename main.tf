@@ -38,7 +38,7 @@ module "creator" {
   l3_object_key = "quinovas/cloudwatch-stddev-alarm-creator/cloudwatch-stddev-alarm-creator-0.0.2.zip"
   source        = "QuiNovas/lambdalambdalambda/aws"
   timeout       = 900
-  version       = "3.0.2"
+  version       = "3.0.4"
 }
 
 resource "aws_cloudwatch_event_rule" "creator" {
